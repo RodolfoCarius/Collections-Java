@@ -33,12 +33,14 @@ public class CarrinhoCompras {
 		System.out.println(carrinhoCompras);
 	}
 	
+	//criar esse método
 	public void calcularValorTotal() {
 		
 	}
 
 	public static void main(String[] args) {
 		CarrinhoCompras carrinhoCompras = new CarrinhoCompras();
+		
 		System.out.println("O número total de itens no carrinho é: " + carrinhoCompras.obterNumeroTotalDeIttens());
 	
 		carrinhoCompras.adicionarItem("café", 2.55, 1);
