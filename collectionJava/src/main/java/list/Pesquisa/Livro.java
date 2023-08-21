@@ -44,10 +44,4 @@ public class Livro {
 				", ano de Publicação = " + anoPublicacao + 
 				"}\n";
 	}
-	
-	
-	
-	
-	
 }
-
