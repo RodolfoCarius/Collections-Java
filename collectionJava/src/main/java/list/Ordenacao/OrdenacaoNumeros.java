@@ -14,7 +14,6 @@ public class OrdenacaoNumeros {
 	}
 
 
-
 	public List<Integer> getNumeros() {
 		return numeros;
 	}
@@ -26,7 +25,6 @@ public class OrdenacaoNumeros {
 	
 	public void  adicionarNumero(int numero) {
 		numeros.add(numero);
-		return ;
 	}
 
 

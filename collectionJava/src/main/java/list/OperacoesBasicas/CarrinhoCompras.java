@@ -33,9 +33,14 @@ public class CarrinhoCompras {
 		System.out.println(carrinhoCompras);
 	}
 	
-	//criar esse método
-	public void calcularValorTotal() {
-		
+	
+	public double calcularValorTotal() {
+		double valorTotal = 0d;
+		for(Item i : carrinhoCompras) {
+			double valorPorItem = i.getPreco() *i.getQuantidade();
+			valorTotal += valorPorItem;
+		}
+		return valorTotal;
 	}
 
 	public static void main(String[] args) {
@@ -43,11 +48,14 @@ public class CarrinhoCompras {
 		
 		System.out.println("O número total de itens no carrinho é: " + carrinhoCompras.obterNumeroTotalDeIttens());
 	
-		carrinhoCompras.adicionarItem("café", 2.55, 1);
+		carrinhoCompras.adicionarItem("café", 2.50, 2);
+		carrinhoCompras.adicionarItem("leite", 3.5, 3);
+		carrinhoCompras.adicionarItem("biscoito", 3, 2);
 		System.out.println("O número total de itens no carrinho é: " + carrinhoCompras.obterNumeroTotalDeIttens());
 		
 		carrinhoCompras.exibirItens();
 		
+		System.out.println(carrinhoCompras.calcularValorTotal());
 		carrinhoCompras.removerItemPorNome("café");
 		System.out.println("O número total de itens no carrinho é: " + carrinhoCompras.obterNumeroTotalDeIttens());
 		
