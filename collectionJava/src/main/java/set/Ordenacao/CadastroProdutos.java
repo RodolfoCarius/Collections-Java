@@ -13,7 +13,7 @@ public class CadastroProdutos {
 	}
 	
 	public void adicionarProduto(String nome, long codigo, double preco, int quantidade) {
-		produtoSet.add(new Produto(nome, codigo, preco, quantidade));
+		produtoSet.add(new Produto(codigo, nome, preco, quantidade));
 	}
 	
 	public Set<Produto> exibirProdutosPorNome(){
@@ -21,11 +21,12 @@ public class CadastroProdutos {
 		return produtosPorNome; 
 	}
 	
-	public Set<Produto>exibirProdutosPorPreco(){
-		Set<Produto> produtosPorPreco = new TreeSet<>(new ComparatorPorPrecos());
+	public Set<Produto> exibirProdutosPorPreco(){
+		Set<Produto> produtosPorPreco = new TreeSet<>(new ComparatorPorPreco());
 		produtosPorPreco.addAll(produtoSet);
 		return produtosPorPreco;
 	}
+		
 	
 	public static void main(String[] args) {
 		CadastroProdutos cadastroProdutos = new CadastroProdutos();
